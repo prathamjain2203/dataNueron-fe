@@ -146,7 +146,7 @@ function App() {
           <Table
             columns={columns}
             pagination={false}
-            style={{ width: "90%", overflow: "scroll" }}
+            style={{ width: "90%", overflow: "scroll", height: "200px" }}
             dataSource={getData || []}
           />
         </div>
