@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
+}
+
+.flex-column {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.bg-darker {
+  background-color: #202020;
+}
+
+.bg-dark {
+  background-color: #2d3032;
+}
+
+.font-mono {
+  font-family: monospace;
+}
+
+.color-white {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.overflow-hidden {
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contents {
+  display: grid;
+  place-items: center;
+  transition: filter 0.2s ease-out, background-color 0.2s ease-out;
+  font-size: 16px;
+}
+
+.dragging {
+  filter: blur(5px);
+  background-color: #555555;
+}
+.sample-drag-bar {
+  flex-shrink: 0;
+  width: 5px;
+  background-color: #d1d5db;
+  cursor: col-resize;
+  transition: background-color 0.15s 0.15s ease-in-out;
+}
+
+.sample-drag-bar.sample-drag-bar--dragging,
+.sample-drag-bar:hover {
+  background-color: #63b3ed;
+}
+
+.sample-drag-bar.sample-drag-bar--horizontal {
+  height: 5px;
+  width: 100%;
+  cursor: row-resize;
+}
+.add_data_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  color: white;
+}
+.field-container > .label {
+  color: #202020;
 }
